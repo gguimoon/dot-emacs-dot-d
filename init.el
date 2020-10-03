@@ -10,15 +10,19 @@
 ;; 패키지 매니저 활성화
 ;; 아카이브 사이트에서 패키지 목록을 수동으로 받아오는 작업 필요
 ;; M-x package-refresh-contents RET
-;; 패키지 이용하기 전에 설치 작업 필요
-;; M-x package-install RET use-package RET
-;; use-package 선언적인 패키지 관리를 위한 패키지
 (require 'package)
 (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
 (add-to-list 'package-archives '("melpa-stable" . "http://stable.melpa.org/packages/"))
 (setq package-enable-at-startup nil)
 (package-initialize)
+
+;; 패키지 이용하기 전에 설치 작업 필요
+;; M-x package-install RET use-package RET
+;; use-package 선언적인 패키지 관리를 위한 패키지
+(when (not (package-installed-p 'use-package))
+  (package-refresh-contents)
+  (package-install 'use-package))
 
 ;; Nord 테마 패키지 사용
 ;; https://www.nordtheme.com/ports/emacs
