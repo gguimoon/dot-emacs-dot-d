@@ -7,6 +7,27 @@
 ;; https://www.emacswiki.org/emacs/Unicad
 (require 'unicad)
 
+;; 프레임 영역 기본 글꼴로 D2Coding 12pt 사용
+(set-frame-font "D2Coding-12" nil t)
+
+;; Do not use 'init.el' for 'custom-*' code, use 'custom.el' instead
+(setq custom-file "~/.emacs.d/custom.el")
+(load custom-file)
+
+;; Emacs 내장 한글입력기 사용
+;; OS 한영 키와 Emacs 한영 키를 다르게 운영
+(setq default-input-method "korean-hangul")
+(global-set-key (kbd "S-SPC") 'toggle-input-method)
+
+;; Emacs Customizer UI 사용한 설정 옮겨옴
+(scroll-bar-mode -1)
+(tool-bar-mode -1)
+(setq auto-save-default nil)
+(setq delete-selection-mode t)
+(setq inhibit-startup-screen t)
+(setq make-backup-files nil)
+(setq vc-follow-symlinks t)
+
 ;; 패키지 매니저 활성화
 ;; 아카이브 사이트에서 패키지 목록을 수동으로 받아오는 작업 필요
 ;; M-x package-refresh-contents RET
@@ -54,14 +75,3 @@
   (ivy-mode 1)
   )
 
-;; 프레임 영역 기본 글꼴로 D2Coding 12pt 사용
-(set-frame-font "D2Coding-12" nil t)
-
-;; Emacs Customizer UI 사용한 설정 결과 custom.el 저장
-(setq custom-file "~/.emacs.d/custom.el")
-(load custom-file)
-
-;; Emacs 내장 한글입력기 사용
-;; OS 한영 키와 Emacs 한영 키를 다르게 운영
-(setq default-input-method "korean-hangul")
-(global-set-key (kbd "S-SPC") 'toggle-input-method)
