@@ -20,8 +20,19 @@
 (global-set-key (kbd "S-SPC") 'toggle-input-method)
 
 ;; Emacs Customizer UI 사용한 설정 옮겨옴
-(scroll-bar-mode -1)
-(tool-bar-mode -1)
+;; 저장한 Desktop 설정과 테마 패키지 설정이 충돌하는 듯
+(progn
+  ;; Do not show tool bar.
+  (when (fboundp 'tool-bar-mode)
+    (tool-bar-mode -1))
+
+  ;; Do not show scroll bar.
+  (when (fboundp 'scroll-bar-mode)
+    (scroll-bar-mode -1))
+
+  ;; Highlight line on point.
+  (global-hl-line-mode t))
+
 (setq auto-save-default nil)
 (setq delete-selection-mode t)
 (setq inhibit-startup-screen t)
