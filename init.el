@@ -29,7 +29,16 @@
 (use-package nord-theme
   :ensure t
   :config
-  (load-theme 'nord t))
+  (load-theme 'nord t)
+  :delight)
+
+;; Spacemacs 테마 패키지 사용
+(use-package ewal-spacemacs-themes
+  :disabled
+  :ensure t
+  :config
+  (load-theme 'spacemacs-dark t)
+  :delight)
 
 ;; Ivy, Counsel and Swiper 패키지 사용
 ;; 파일 오픈이나 버퍼 변경시 fuzzy find 구현해 줌
