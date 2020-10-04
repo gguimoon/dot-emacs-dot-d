@@ -86,3 +86,12 @@
   (ivy-mode 1)
   )
 
+;; Recentf 패키지 사용
+(use-package recentf
+  :ensure t
+  :config
+  (setq recentf-auto-cleanup 'never
+        recentf-max-saved-items 50
+        recentf-save-file (concat user-emacs-directory "recentf"))
+  (recentf-mode t)
+  :delight)
