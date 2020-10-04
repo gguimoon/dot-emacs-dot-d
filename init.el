@@ -27,6 +27,7 @@
 ;; Nord 테마 패키지 사용
 ;; https://www.nordtheme.com/ports/emacs
 (use-package nord-theme
+  :ensure t
   :config
   (load-theme 'nord t))
 
@@ -34,6 +35,7 @@
 ;; 파일 오픈이나 버퍼 변경시 fuzzy find 구현해 줌
 ;; https://writequit.org/denver-emacs/presentations/2017-04-11-ivy.html
 (use-package counsel
+  :ensure t
   :config
   (setq ivy-use-virtual-buffers t)
   (setq ivy-count-format "(%d/%d) ")
