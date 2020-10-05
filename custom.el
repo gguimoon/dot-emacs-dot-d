@@ -8,6 +8,8 @@
  '(global-hl-line-mode t)
  '(inhibit-startup-screen t)
  '(make-backup-files nil)
+ '(package-selected-packages
+   '(magit use-package nord-theme ewal-spacemacs-themes counsel))
  '(scroll-bar-mode nil)
  '(tool-bar-mode nil)
  '(vc-follow-symlinks t))

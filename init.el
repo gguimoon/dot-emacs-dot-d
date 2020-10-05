@@ -55,11 +55,9 @@
   :config
   (setq ivy-use-virtual-buffers t)
   (setq ivy-count-format "(%d/%d) ")
-  (setq ivy-re-builders-alist
-        '((t . ivy--regex-fuzzy)))
+  (setq ivy-re-builders-alist '((t . ivy--regex-fuzzy)))
   (setq ivy-height 16)
-  (ivy-mode 1)
-  )
+  (ivy-mode 1))
 
 ;; Recentf 패키지 사용
 (use-package recentf
@@ -69,4 +67,9 @@
         recentf-max-saved-items 50
         recentf-save-file (concat user-emacs-directory "recentf"))
   (recentf-mode t))
+
+;; Magit 패키지 사용
+(use-package magit
+  :ensure t
+  :bind ("C-x g" . magit-status))
 
