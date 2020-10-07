@@ -1,9 +1,8 @@
 .emacs.desktop
 /auto-save-list/
 /elpa/
-/lisp/
-recentf
 /transient/
 /tutorial/
 /url/
+recentf
 *~$
