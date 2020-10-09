@@ -16,6 +16,12 @@
 (setq default-input-method "korean-hangul")
 (global-set-key (kbd "S-SPC") 'toggle-input-method)
 
+;; Org-mode hook 등록
+(add-hook 'org-mode-hook #'toggle-word-wrap)
+(add-hook 'org-mode-hook #'toggle-truncate-lines)
+(add-hook 'org-mode-hook #'display-line-numbers-mode)
+(add-hook 'org-mode-hook #'org-indent-mode)
+
 ;; 패키지 매니저 활성화
 ;; 아카이브 사이트에서 패키지 목록을 수동으로 받아오는 작업 필요
 ;; M-x package-refresh-contents RET

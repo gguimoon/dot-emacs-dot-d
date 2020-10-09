@@ -5,12 +5,15 @@
  ;; If there is more than one, they won't work right.
  '(auto-save-default nil)
  '(delete-selection-mode t)
+ '(display-line-numbers-type 'visual)
  '(global-hl-line-mode t)
  '(inhibit-startup-screen t)
  '(make-backup-files nil)
+ '(org-catch-invisible-edits 'error)
  '(package-selected-packages
    '(magit use-package nord-theme ewal-spacemacs-themes counsel))
  '(scroll-bar-mode nil)
+ '(size-indication-mode t)
  '(tool-bar-mode nil)
  '(vc-follow-symlinks t))
 (custom-set-faces
