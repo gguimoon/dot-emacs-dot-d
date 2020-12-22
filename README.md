@@ -8,6 +8,6 @@
 
 # Installing (Windows 10)
 
-1. Go to ~/AppData/Roaming
+1. Go to `~/AppData/Roaming`
 2. Delete `~/.emacs` or `~/.emacs.d`, if you already have it.
 3. Run `git clone https://github.com/gguimoon/dot-emacs-dot-d.git .emacs.d`
