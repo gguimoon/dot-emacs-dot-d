@@ -25,6 +25,11 @@
 ;; 패키지 매니저 활성화
 ;; 아카이브 사이트에서 패키지 목록을 수동으로 받아오는 작업 필요
 ;; M-x package-refresh-contents RET
+;; 패키지 업그레이드
+;; M-x package-refresh-contents RET
+;; M-x list-packages RET
+;; Hit 'U' to mark available upgrades
+;; Then 'x' to upgrade
 (require 'package)
 (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
