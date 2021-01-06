@@ -84,3 +84,13 @@
   :ensure t
   :bind ("C-x g" . magit-status))
 
+;; Which key 패키지 사용
+;; It displays available key bindings in popup.
+;; Waiting after a prefix key will show the contents of the corresponding keymap.
+;; M-x which-key-show-major mode may also be helpful.
+(use-package which-key
+  :ensure t
+  :config
+  (setq which-key-lighter "")
+  (setq which-key-idle-delay 1.0)
+  (which-key-mode 1))
