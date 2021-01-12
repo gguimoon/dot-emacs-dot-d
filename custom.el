@@ -9,7 +9,8 @@
  '(global-hl-line-mode t)
  '(inhibit-startup-screen t)
  '(make-backup-files nil)
- '(org-agenda-files '("~/Repos/orgnotes/Tracker.org"))
+ '(org-agenda-files
+   '("~/Repos/orgnotes/Index.org" "~/Repos/orgnotes/Work.org" "~/Repos/orgnotes/Tracker.org"))
  '(org-catch-invisible-edits 'error)
  '(package-selected-packages
    '(which-key magit use-package nord-theme ewal-spacemacs-themes counsel))
