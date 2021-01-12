@@ -16,6 +16,12 @@
 (setq default-input-method "korean-hangul")
 (global-set-key (kbd "S-SPC") 'toggle-input-method)
 
+;; Org-mode 키 바인딩 등록
+;; https://orgmode.org/manual/Activation.html#Activation
+(global-set-key (kbd "C-c a") 'org-agenda)
+(global-set-key (kbd "C-c c") 'org-capture)
+(global-set-key (kbd "C-c l") 'org-store-link)
+
 ;; Org-mode hook 등록
 (add-hook 'org-mode-hook #'toggle-word-wrap)
 (add-hook 'org-mode-hook #'toggle-truncate-lines)
