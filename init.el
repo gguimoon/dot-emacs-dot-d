@@ -97,6 +97,7 @@
 
 ;; Org 패키지 사용
 (use-package org
+  :ensure t
   :init
   ;; Org-mode hook 등록
   (add-hook 'org-mode-hook #'toggle-word-wrap)
@@ -106,4 +107,13 @@
 
   ;; Org-habit module 활성화
   (with-eval-after-load 'org
-    (add-to-list 'org-modules 'org-habit t)))
+    (add-to-list 'org-modules 'org-habit t))
+
+  :config
+  ;; Show clocked items for the day in the agenda
+  (setq org-agenda-start-with-log-mode t)
+  ;; Log a time stamp when tasks completed
+  (setq org-log-done 'time)
+  ;; Insert state change notes and time stamps into a drawer
+  (setq org-log-into-drawer t))
+
