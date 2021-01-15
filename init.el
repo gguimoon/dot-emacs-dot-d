@@ -22,16 +22,6 @@
 (global-set-key (kbd "C-c c") 'org-capture)
 (global-set-key (kbd "C-c l") 'org-store-link)
 
-;; Org-mode hook 등록
-(add-hook 'org-mode-hook #'toggle-word-wrap)
-(add-hook 'org-mode-hook #'toggle-truncate-lines)
-(add-hook 'org-mode-hook #'display-line-numbers-mode)
-(add-hook 'org-mode-hook #'org-indent-mode)
-
-;; Org-habit module 활성화
-(with-eval-after-load 'org
-  (add-to-list 'org-modules 'org-habit t))
-
 ;; 패키지 매니저 활성화
 ;; 아카이브 사이트에서 패키지 목록을 수동으로 받아오는 작업 필요
 ;; M-x package-refresh-contents RET
@@ -104,3 +94,16 @@
   (setq which-key-lighter "")
   (setq which-key-idle-delay 1.0)
   (which-key-mode 1))
+
+;; Org 패키지 사용
+(use-package org
+  :init
+  ;; Org-mode hook 등록
+  (add-hook 'org-mode-hook #'toggle-word-wrap)
+  (add-hook 'org-mode-hook #'toggle-truncate-lines)
+  (add-hook 'org-mode-hook #'display-line-numbers-mode)
+  (add-hook 'org-mode-hook #'org-indent-mode)
+
+  ;; Org-habit module 활성화
+  (with-eval-after-load 'org
+    (add-to-list 'org-modules 'org-habit t)))
