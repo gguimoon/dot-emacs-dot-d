@@ -115,5 +115,22 @@
   ;; Log a time stamp when tasks completed
   (setq org-log-done 'time)
   ;; Insert state change notes and time stamps into a drawer
-  (setq org-log-into-drawer t))
-
+  (setq org-log-into-drawer t)
+  ;; Force UTF-8
+  (setq org-export-coding-system 'utf-8)
+  ;; Set a default target file for captures
+  (setq org-directory "~/Repos/orgnotes")
+  (setq org-default-notes-file (concat org-directory "/Capture.org"))
+  ;; Do not create a capture bookmark
+  (setq org-capture-bookmark nil)
+  ;; Configure org-capture templates
+  (setq org-capture-templates
+    '(("t" "Todo list item"
+       entry (file+headline org-default-notes-file "Tasks")
+       "* TODO %?\n %i\n %a" :empty-lines 1)
+      ("j" "Journal entry"
+       entry (file+olp+datetree "~/Repos/orgnotes/Journal.org")
+       (file "~/.emacs.d/org-templates/journal.orgcaptmpl.txt") :empty-lines 1)
+     )
+  )
+)
